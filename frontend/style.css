@@ -13,21 +13,16 @@ p, ul, ol, table, pre, dl {
 }
 div.page {
     margin-top: 0.5em;
-    background: white;
-    box-shadow: 0.1em 0.2em 1em rgba(0, 0, 0, 0.4);
-    border-radius: 0.1em;
 }
 .page {
     width: 62em;
     margin: 0 auto;
-    padding: 1.5em 2em 1em 1em;
-    box-sizing: border-box;
 }
-article {
-    float: right;
-    width: 40em;
-}
-.heading {
+.page-wrapper {
+    background: white;
+    box-shadow: 0.1em 0.2em 1em rgba(0, 0, 0, 0.4);
+    padding: 1.5em 2em 1em 5em;
+    border-radius: 0.1em;
     float: right;
     width: 40em;
 }
@@ -83,7 +78,13 @@ li.todo-item {
     float: left;
     width: 16em;
     background: white;
-    padding: 4.2em 1em 1em 0;
+    margin-top: 0.5em;
+    padding: 0.5em 1em 0em 0;
+    box-shadow: 0.1em 0.2em 1em rgba(0, 0, 0, 0.4);
+    border-radius: 0.2em;
+    z-index: 1;
+    margin-left: 1.5em;
+    position: absolute;
 }
 div.level {
     margin-left: 1em;
@@ -92,25 +93,20 @@ div.level>a {
     display: inline;
 }
 .node {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 div.actions {
     display: inline;
-    float: right;
 }
 div.actions button {
-    border-radius: 0.2em;
-    width: 1em;
-    height: 1em;
     padding: 0;
     background: white;
-    text-decoration: none;
-    text-shadow: 0 0.1em 0 rgba(255, 255, 255, 0.8);
+    text-shadow: 0 -0.1em 0 rgba(255, 255, 255, 0.8);
     border: none;
 }
 div.edit-wrapper {
     float: right;
-    margin-right: -3em;
+    margin-right: -1em;
     width: 2em;
 }
 div.edit {
@@ -148,8 +144,20 @@ button:focus {
 a {
     color: mediumblue;
 }
+.fa-trash-o {
+    color: #aaaaaa;
+}
+.fa-trash-o:before {
+    font-size: 0.8em;
+}
+.fa-plus {
+    color: #666;
+}
+.fa-plus:before {
+    font-size: 0.8em;
+}
 .fa:hover, a:hover, a:visited:hover {
-    color: mediumslateblue;
+    color: mediumblue;
 }
 a:visited {
     color: darkred;
@@ -166,20 +174,26 @@ button.fa-plus:before {
     line-height: 0.8em;
     vertical-align: middle;
 }
-footer.page {
+button.fa-trash-o:before {
+    line-height: 0.8em;
+    vertical-align: middle;
+}
+footer.page-wrapper {
+    background: none;
     color: #aaa;
+    box-shadow: none;
     text-shadow: 0 0.1em 0 rgba(255, 255, 255, 0.8);
     padding-top: 1em;
 }
-footer.page a {
+footer.page-wrapper a {
     color: #666;
     text-decoration: none;
 }
-footer.page a:hover {
+footer.page-wrapper a:hover {
     color: #444;
     text-decoration: underline;
 }
-footer.page p {
+footer.page-wrapper p {
     margin-bottom: 0;
 }
 h1[contenteditable] {
