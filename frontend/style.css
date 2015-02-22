@@ -1,0 +1,193 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    background: #e7e7e7;
+    color: #555;
+}
+p, ul, ol, table, pre, dl {
+    margin: 0 0 1em 0;
+}
+div.page {
+    margin-top: 0.5em;
+    background: white;
+    box-shadow: 0.1em 0.2em 1em rgba(0, 0, 0, 0.4);
+    border-radius: 0.1em;
+}
+.page {
+    width: 62em;
+    margin: 0 auto;
+    padding: 1.5em 2em 1em 1em;
+    box-sizing: border-box;
+}
+article {
+    float: right;
+    width: 40em;
+}
+.heading {
+    float: right;
+    width: 40em;
+}
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'PT Sans Caption', sans-serif;
+    color: #393939;
+}
+h1 {
+    font-size: 2em;
+    margin-top: 0;
+}
+h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+}
+ul, ol {
+    padding-left: 2em;
+}
+li {
+    padding-top: 0.3em;
+}
+pre {
+    font-family: "Menlo", "Monaco", "Consolas", "Inconsolata", "Source Code Pro", "Courier", monospace;
+    font-size: 0.9em;
+    padding: 0.4em 0.3em;
+    margin-right: 1.8em;
+    margin-left: 1.8em;
+    background: #f8f8f8;
+    border-radius: 0.3em;
+    border: 0.1em solid #e5e5e5;
+}
+code {
+    font-family: "Menlo", "Monaco", "Consolas", "Inconsolata", "Source Code Pro", "Courier", monospace;
+    font-size: 0.9em;
+    padding: 0.2em 0.3em;
+    background: #f8f8f8;
+    border-radius: 0.3em;
+    border: 0.1em solid #e5e5e5;
+}
+li.todo-item {
+    list-style-type: none;
+}
+.todo-item input[type="checkbox"] {
+    vertical-align: middle;
+    margin: 0.3em 0 0.25em -1.6em;
+    float: left;
+}
+.navigation {
+    float: left;
+    width: 16em;
+    background: white;
+    padding: 4.2em 1em 1em 0;
+}
+div.level {
+    margin-left: 1em;
+}
+div.level>a {
+    display: inline;
+}
+.node {
+    margin-bottom: 1em;
+}
+div.actions {
+    display: inline;
+    float: right;
+}
+div.actions button {
+    border-radius: 0.2em;
+    width: 1em;
+    height: 1em;
+    padding: 0;
+    background: white;
+    text-decoration: none;
+    text-shadow: 0 0.1em 0 rgba(255, 255, 255, 0.8);
+    border: none;
+}
+div.edit-wrapper {
+    float: right;
+    margin-right: -3em;
+    width: 2em;
+}
+div.edit {
+    position: fixed;
+    top: 1em;
+    overflow: hidden;
+    border-radius: 0.2em;
+    background: white;
+    box-shadow: 0.1em 0.2em 1em rgba(0, 0, 0, 0.4);
+    width: 2em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+
+    max-height: 22em;
+    -webkit-transition: max-height 1s ease-out 0.1s;
+    -moz-transition: max-height 1s ease-out 0.1s;
+    -o-transition: max-height 1s ease-out 0.1s;
+    transition: max-height 1s ease-out 0.1s;
+}
+div.edit.no-edit-mode {
+    max-height: 2.5em;
+}
+div.edit.no-edit-mode.readonly {
+    max-height: 1.25em;
+}
+div.edit button {
+    border-radius: 0.2em;
+    background: white;
+    border: none;
+    width: 2em;
+}
+button:focus {
+    outline: 0;
+}
+a {
+    color: mediumblue;
+}
+.fa:hover, a:hover, a:visited:hover {
+    color: mediumslateblue;
+}
+a:visited {
+    color: darkred;
+}
+.fa:active, a:active, a:visited:active {
+    color: red;
+}
+div.edit button.fa-edit:before {
+    line-height: 0.8em;
+    vertical-align: middle;
+    padding-left: 0.15em;
+}
+button.fa-plus:before {
+    line-height: 0.8em;
+    vertical-align: middle;
+}
+footer.page {
+    color: #aaa;
+    text-shadow: 0 0.1em 0 rgba(255, 255, 255, 0.8);
+    padding-top: 1em;
+}
+footer.page a {
+    color: #666;
+    text-decoration: none;
+}
+footer.page a:hover {
+    color: #444;
+    text-decoration: underline;
+}
+footer.page p {
+    margin-bottom: 0;
+}
+h1[contenteditable] {
+    outline-width: 0.1em;
+    outline-offset: 0;
+}
+[contenteditable] {
+    outline-color: darkred;
+    outline-width: 0.2em;
+    outline-offset: 1em;
+}
