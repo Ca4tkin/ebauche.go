@@ -3,10 +3,10 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Ebauche Wiki</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption|Inconsolata&subset=latin,cyrillic'
-          rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption|Inconsolata&subset=latin,cyrillic'
+          rel='stylesheet'>
 </head>
 <body>
 
@@ -15,16 +15,45 @@
         <div class="level">
             <div class="node">
                 <div class="actions">
-                    <button class="fa fa-plus" title="Add child"></button>
+                    <button class="create-node link fa fa-plus smallish" title="Add child"></button>
                 </div>
-                <a href="/jfdj">Jar Jar Binks' Wiki</a>
+                <a href="/wiki/">Jar Jar Binks' Wiki</a>
             </div>
 
             <div class="level">
                 <div class="node">
                     <div class="actions">
-                        <button class="fa fa-trash-o" title="Remove node"></button>
-                        <button class="fa fa-plus" title="Add child"></button>
+                        <button class="remove-node link fa fa-trash-o smallish" title="Remove node"></button>
+                        <form class="popup remove" method="delete" action="/wiki">
+                            <button class="link close fa fa-times smallish" type="reset"></button>
+                            <input type="hidden" name="id" value="/boom-boom-usage">
+                            <div class="field">
+                                <label>
+                                    <input type="radio" name="mode" value="recursive" checked>
+                                    Delete the node and all its children recursivelly
+                                </label>
+                            </div>
+                            <div class="field">
+                                <label>
+                                    <input type="radio" name="mode" value="hoist">
+                                    Delete the node and append its children to the node's parent
+                                </label>
+                            </div>
+                            <button class="submit" type="submit">Proceed</button>
+                            <button class="link cancel" type="reset">Cancel</button>
+                        </form>
+
+                        <button class="create-node link fa fa-plus smallish" title="Add child"></button>
+                        <form class="popup create" method="post" action="/wiki">
+                            <button class="link close fa fa-times smallish" type="reset"></button>
+                            <p>Create a node with title:</p>
+                            <input type="hidden" name="parent" value="/boom-boom-usage">
+                            <div class="field">
+                                <input type="text" name="title" placeholder="Title" required>
+                            </div>
+                            <button class="submit" type="submit">Create</button>
+                            <button class="link cancel" type="reset">Cancel</button>
+                        </form>
                     </div>
                     <a href="">Boom Boom Usage</a>
                 </div>
@@ -32,8 +61,8 @@
                 <div class="level">
                     <div class="node">
                         <div class="actions">
-                            <button class="fa fa-trash-o" title="Remove node"></button>
-                            <button class="fa fa-plus" title="Add child"></button>
+                            <button class="link fa fa-trash-o smallish" title="Remove node"></button>
+                            <button class="create-node link fa fa-plus smallish" title="Add child"></button>
                         </div>
                         <a href="">Safety Measures</a>
                     </div>
@@ -41,8 +70,8 @@
                     <div class="level">
                         <div class="node">
                             <div class="actions">
-                                <button class="fa fa-trash-o" title="Remove node"></button>
-                                <button class="fa fa-plus" title="Add child"></button>
+                                <button class="link fa fa-trash-o smallish" title="Remove node"></button>
+                                <button class="create-node link fa fa-plus smallish" title="Add child"></button>
                             </div>
                             <a href="">Active</a>
                         </div>
@@ -50,8 +79,8 @@
                     <div class="level">
                         <div class="node">
                             <div class="actions">
-                                <button class="fa fa-trash-o" title="Remove node"></button>
-                                <button class="fa fa-plus" title="Add child"></button>
+                                <button class="link fa fa-trash-o smallish" title="Remove node"></button>
+                                <button class="create-node link fa fa-plus smallish" title="Add child"></button>
                             </div>
                             <a href="">Passive</a>
                         </div>
@@ -60,8 +89,8 @@
                 <div class="level">
                     <div class="node">
                         <div class="actions">
-                            <button class="fa fa-trash-o" title="Remove node"></button>
-                            <button class="fa fa-plus" title="Add child"></button>
+                            <button class="link fa fa-trash-o smallish" title="Remove node"></button>
+                            <button class="create-node link fa fa-plus smallish" title="Add child"></button>
                         </div>
                         <a href="">Tactics</a>
                     </div>
@@ -70,8 +99,8 @@
             <div class="level">
                 <div class="node">
                     <div class="actions">
-                        <button class="fa fa-trash-o" title="Remove node"></button>
-                        <button class="fa fa-plus" title="Add child"></button>
+                        <button class="link fa fa-trash-o smallish" title="Remove node"></button>
+                        <button class="create-node link fa fa-plus smallish" title="Add child"></button>
                     </div>
                     <a href="">Tongue Techniques</a>
                 </div>
@@ -79,16 +108,16 @@
             <div class="level">
                 <div class="node">
                     <div class="actions">
-                        <button class="fa fa-trash-o" title="Remove node"></button>
-                        <button class="fa fa-plus" title="Add child"></button>
+                        <button class="link fa fa-trash-o smallish" title="Remove node"></button>
+                        <button class="create-node link fa fa-plus smallish" title="Add child"></button>
                     </div>
                     <a href="">Articles</a>
                 </div>
                 <div class="level">
                     <div class="node">
                         <div class="actions">
-                            <button class="fa fa-trash-o" title="Remove node"></button>
-                            <button class="fa fa-plus" title="Add child"></button>
+                            <button class="link fa fa-trash-o smallish" title="Remove node"></button>
+                            <button class="create-node link fa fa-plus smallish" title="Add child"></button>
                         </div>
                         <a href="">How To Make Friends</a>
                     </div>
@@ -96,8 +125,8 @@
                 <div class="level">
                     <div class="node">
                         <div class="actions">
-                            <button class="fa fa-trash-o" title="Remove node"></button>
-                            <button class="fa fa-plus" title="Add child"></button>
+                            <button class="link fa fa-trash-o smallish" title="Remove node"></button>
+                            <button class="create-node link fa fa-plus smallish" title="Add child"></button>
                         </div>
                         <a href="">From Loser to Emperor</a>
                     </div>
@@ -105,8 +134,8 @@
                 <div class="level">
                     <div class="node">
                         <div class="actions">
-                            <button class="fa fa-trash-o" title="Remove node"></button>
-                            <button class="fa fa-plus" title="Add child"></button>
+                            <button class="link fa fa-trash-o smallish" title="Remove node"></button>
+                            <button class="create-node link fa fa-plus smallish" title="Add child"></button>
                         </div>
                         <a href="">Water World of Naboo</a>
                     </div>
@@ -114,8 +143,8 @@
                 <div class="level">
                     <div class="node">
                         <div class="actions">
-                            <button class="fa fa-trash-o" title="Remove node"></button>
-                            <button class="fa fa-plus" title="Add child"></button>
+                            <button class="link fa fa-trash-o smallish" title="Remove node"></button>
+                            <button class="create-node link fa fa-plus smallish" title="Add child"></button>
                         </div>
                         <a href="">Under The Hood</a>
                     </div>
@@ -123,8 +152,8 @@
                 <div class="level">
                     <div class="node">
                         <div class="actions">
-                            <button class="fa fa-trash-o" title="Remove node"></button>
-                            <button class="fa fa-plus" title="Add child"></button>
+                            <button class="link fa fa-trash-o smallish" title="Remove node"></button>
+                            <button class="create-node link fa fa-plus smallish" title="Add child"></button>
                         </div>
                         <a href="">Dinosaur Riding</a>
                     </div>
@@ -133,8 +162,8 @@
             <div class="level">
                 <div class="node">
                     <div class="actions">
-                        <button class="fa fa-trash-o" title="Remove node"></button>
-                        <button class="fa fa-plus" title="Add child"></button>
+                        <button class="link fa fa-trash-o smallish" title="Remove node"></button>
+                        <button class="create-node link fa fa-plus smallish" title="Add child"></button>
                     </div>
                     <a href="">Biography</a>
                 </div>
@@ -142,8 +171,8 @@
             <div class="level">
                 <div class="node">
                     <div class="actions">
-                        <button class="fa fa-trash-o" title="Remove node"></button>
-                        <button class="fa fa-plus" title="Add child"></button>
+                        <button class="link fa fa-trash-o smallish" title="Remove node"></button>
+                        <button class="create-node link fa fa-plus smallish" title="Add child"></button>
                     </div>
                     <a href="">The Incredible Story of Naboo Rulers</a>
                 </div>
@@ -152,21 +181,21 @@
     </nav>
     <div class="edit-wrapper">
         <div id="toolbar" class="edit no-edit-mode">
-            <button class="fa fa-sign-in" title="Sign in"></button>
-            <!--<button class="fa fa-sign-out"></button>-->
-            <button id="toggle-edit" class="fa fa-edit" title="Toggle edit mode"></button>
-            <button class="fa fa-floppy-o" title="Save"></button>
-            <button id="scale-up" class="fa fa-sort-asc" title="Font size +"></button>
-            <button id="scale-down" class="fa fa-sort-desc" title="Font size -"></button>
-            <button class="fa fa-bold" title="Bold/unbold selection"></button>
-            <button class="fa fa-italic" title="Italicise/deitalicise selection"></button>
-            <button class="fa fa-file-code-o" title="Code block"></button>
-            <button class="fa fa-code" title="Inline code"></button>
-            <button class="fa fa-link" title="Link"></button>
-            <button class="fa fa-external-link" title="External link"></button>
-            <button class="fa fa-check-square-o" title="Checkbox"></button>
-            <button class="fa fa-list-ul" title="Unordered list"></button>
-            <button class="fa fa-list-ol" title="Ordered list"></button>
+            <button class="link fa fa-sign-in" title="Sign in"></button>
+            <!--<button class="link fa fa-sign-out"></button>-->
+            <button id="toggle-edit" class="link fa fa-edit" title="Toggle edit mode"></button>
+            <button class="link fa fa-floppy-o" title="Save"></button>
+            <button id="scale-up" class="link fa fa-sort-asc" title="Font size +"></button>
+            <button id="scale-down" class="link fa fa-sort-desc" title="Font size -"></button>
+            <button class="link fa fa-bold" title="Bold/unbold selection"></button>
+            <button class="link fa fa-italic" title="Italicise/deitalicise selection"></button>
+            <button class="link fa fa-file-code-o" title="Code block"></button>
+            <button class="link fa fa-code" title="Inline code"></button>
+            <button class="link fa fa-link" title="Link"></button>
+            <button class="link fa fa-external-link" title="External link"></button>
+            <button class="link fa fa-check-square-o" title="Checkbox"></button>
+            <button class="link fa fa-list-ul" title="Unordered list"></button>
+            <button class="link fa fa-list-ol" title="Ordered list"></button>
         </div>
     </div>
     <section class="page-wrapper">
@@ -269,13 +298,33 @@ Gello {
     <div class="clearfix"></div>
 
     <footer class="page-wrapper">
-        <p>Copyright &copy; 2015 Jar Jar Binks. Powered by <a href="//github.com/sulnedinfind/ebauche.go">Ebauche wiki
-            engine.</a></p>
+        <p>
+            Copyright &copy; 2015 Jar Jar Binks.
+            Powered by <a href="//github.com/sulnedinfind/ebauche.go">Ebauche wiki engine.</a>
+        </p>
     </footer>
 </div>
+
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script>
     $(document).ready(function () {
+        $(document).on('mousedown', function (e) {
+            const $popup = $(e.target).closest('.popup');
+
+            if ($popup.length){
+                $popup.one().addClass('active');
+            } else {
+                $('.popup').each(function () {
+                    $(this).removeClass('active');
+                });
+            }
+        });
+
+        $('.close, .cancel').each(function () {
+            $(this).on('click', function () {
+                $('.popup').removeClass('active');
+            });
+        });
 
         $('#toggle-edit').on('click', toggleEditing);
         $('#scale-up').on('click', scaleUp);

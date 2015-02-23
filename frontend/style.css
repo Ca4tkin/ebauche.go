@@ -79,7 +79,7 @@ li.todo-item {
     width: 16em;
     background: white;
     margin-top: 0.5em;
-    padding: 0.5em 1em 0em 0;
+    padding: 0.5em 1em 0 0;
     box-shadow: 0.1em 0.2em 1em rgba(0, 0, 0, 0.4);
     border-radius: 0.2em;
     z-index: 1;
@@ -98,11 +98,9 @@ div.level>a {
 div.actions {
     display: inline;
 }
-div.actions button {
+div.actions button.link {
     padding: 0;
-    background: white;
     text-shadow: 0 -0.1em 0 rgba(255, 255, 255, 0.8);
-    border: none;
 }
 div.edit-wrapper {
     float: right;
@@ -133,36 +131,30 @@ div.edit.no-edit-mode.readonly {
     max-height: 1.25em;
 }
 div.edit button {
-    border-radius: 0.2em;
-    background: white;
-    border: none;
     width: 2em;
 }
 button:focus {
     outline: 0;
 }
-a {
+a, button.cancel {
     color: mediumblue;
 }
-.fa-trash-o {
-    color: #aaaaaa;
+button.fa-trash-o {
+    color: #aaa;
 }
-.fa-trash-o:before {
-    font-size: 0.8em;
-}
-.fa-plus {
+button.fa-plus {
     color: #666;
 }
-.fa-plus:before {
+.smallish:before {
     font-size: 0.8em;
 }
-.fa:hover, a:hover, a:visited:hover {
+a:hover, .link:hover {
     color: mediumblue;
 }
-a:visited {
-    color: darkred;
+a:visited, .link:visited {
+    color: #993299;
 }
-.fa:active, a:active, a:visited:active {
+a:active, .link:active {
     color: red;
 }
 div.edit button.fa-edit:before {
@@ -204,4 +196,64 @@ h1[contenteditable] {
     outline-color: darkred;
     outline-width: 0.2em;
     outline-offset: 1em;
+}
+.popup {
+    background: white;
+    position: absolute;
+    box-shadow: 0.1em 0.2em 1em rgba(0, 0, 0, 0.4);
+    border-radius: 0.2em;
+    padding: 0.5em 1em;
+    z-index: 10;
+    display: table;
+    overflow: visible;
+    visibility: collapse;
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+input, button {
+    font-size: 1em;
+}
+.link {
+    border: none;
+    background: white !important;
+    color: black;
+}
+a, button {
+    cursor: pointer;
+}
+.close {
+    position: relative;
+    float: right;
+    margin-right: -0.6em;
+    margin-top: -0.5em;
+}
+.popup p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.submit {
+    float: right;
+}
+.field {
+    margin-bottom: 0.5em;
+}
+.create-node:focus+.create,
+.remove-node:focus+.remove,
+.popup:focus, .popup.active {
+    visibility: visible;
+    opacity: 100;
+    transition: opacity 0.4s ease-in;
+}
+.popup button {
+    border-radius: 0.2em;
+}
+.remove .submit {
+    background: red;
+    color: white;
+}
+.create .submit {
+    background: #00ff00;
+}
+.cancel {
+    margin: 0.2em 0;
 }
