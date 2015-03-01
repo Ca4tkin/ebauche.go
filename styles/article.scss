@@ -1,0 +1,99 @@
+.article {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  color: #555;
+  margin: 0.5em auto;
+  width: 40em;
+  box-shadow: 0.1em 0.2em 1em rgba(0, 0, 0, 0.4);
+  padding: 1.5em 2em 1em 5em;
+  border-radius: 0.1em;
+}
+.article__title, .article__header, .article__sub-header  {
+  color: #393939;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-weight: 400;
+}
+.article__header {
+  margin-bottom: 0;
+  font-size: 1.8em;
+}
+.article__title {
+  font-size: 2.2em;
+  margin-top: 0;
+  margin-bottom: 0.3em;
+}
+.article__sub-header {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 1.1em;
+}
+.article__header_nested {
+  font-size: 1.4em;
+  color: #393939;
+  margin-top: 0.8em;
+}
+.article__header_nested2 {
+  font-size: 1.2em;
+  color: #777;
+  margin-top: 0.6em;
+  font-weight: bold;
+}
+.article__header_nested3 {
+  font-size: 1em;
+  margin-top: 0.3em;
+  font-weight: bold;
+  color: #777;
+}
+.article__sub-header_nested {
+  color: #393939;
+  font-size: 1em;
+  margin-top: -0.2em;
+}
+.article__sub-header_nested2 {
+  color: #777;
+  margin-top: -0.2em;
+  font-size: 0.9em;
+}
+.article__sub-header_nested3 {
+  color: #777;
+  margin-top: -0.2em;
+  font-size: 0.8em;
+}
+.article__paragraph {
+  margin: 0 0 1em 0;
+}
+.article__ordered-list, .article__unordered-list {
+  padding-left: 2em;
+}
+.article__ordered-list-item, .article__unordered-list-item {
+  padding-top: 0.3em;
+}
+.article__inline-code {
+  font-family: "Menlo", "Monaco", "Consolas", "Inconsolata", "Source Code Pro", "Courier", monospace;
+  font-size: 0.9em;
+  padding: 0.2em 0.3em;
+  background: #f8f8f8;
+  border-radius: 0.3em;
+  border: 0.1em solid #e5e5e5;
+}
+.figure__code-snippet {
+  font-family: "Menlo", "Monaco", "Consolas", "Inconsolata", "Source Code Pro", "Courier", monospace;
+  font-size: 0.9em;
+  padding: 0.4em 0.3em;
+  margin-right: 1.8em;
+  margin-left: 1.8em;
+  background: #f8f8f8;
+  border-radius: 0.3em;
+  border: 0.1em solid #e5e5e5;
+  white-space: pre-wrap;
+  display: block;
+}
+.article__todo-list-item{
+  list-style-type: none;
+}
+.article__todo-list-checkbox {
+  vertical-align: middle;
+  margin: 0.3em 0 0.25em -1.6em;
+  float: left;
+}
+

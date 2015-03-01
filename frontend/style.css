@@ -18,7 +18,7 @@ div.page {
     width: 62em;
     margin: 0 auto;
 }
-.page-wrapper {
+.article {
     background: white;
     box-shadow: 0.1em 0.2em 1em rgba(0, 0, 0, 0.4);
     padding: 1.5em 2em 1em 5em;
@@ -66,10 +66,10 @@ code {
     border-radius: 0.3em;
     border: 0.1em solid #e5e5e5;
 }
-li.todo-item {
+.article__todo-list-item{
     list-style-type: none;
 }
-.todo-item input[type="checkbox"] {
+.article__todo-list-checkbox {
     vertical-align: middle;
     margin: 0.3em 0 0.25em -1.6em;
     float: left;
